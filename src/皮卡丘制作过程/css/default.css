@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.code-wrapper {
+    flex: 1;
+    height: 50%;
+    padding: 10px;
+}
+
+.preview-wrapper {
+    flex: 1;
+    height: 50%;
+
+}
+
+/*.preview {*/
+/*    height: 100%;*/
+/*    border: 1px solid green;*/
+/*    display: flex; !*居中*!*/
+/*    justify-content: center; !*居中*!*/
+/*    align-items: center; !*居中*!*/
+/*    background: #ffe600;*/
+/*}*/
+
+/*.wrapper {*/
+/*    width: 100%;*/
+/*    height: 165px;*/
+/*    !*border: 1px solid red;*!*/
+/*    position: relative;*/
+/*}*/
+
+/*.wrapper > :not(:last-child) {*/
+/*    z-index: 1;*/
+/*}*/
+
+/*!*-------------------------以下是五官---------------------*!*/
+
+/*!*1 鼻子*!*/
+/*.nose {*/
+/*    width: 0;*/
+/*    height: 0;*/
+/*    border-style: solid;*/
+/*    border-width: 12px;*/
+/*    border-color: black transparent transparent;*/
+/*    border-radius: 11px;*/
+/*    !*background: black;*!*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    margin-left: -12px;*/
+/*    top: 28px;*/
+/*}*/
+
+/*!*2 眼睛*!*/
+/*.eye {*/
+/*    width: 49px;*/
+/*    height: 49px;*/
+/*    background: #2e2e2e;*/
+/*    position: absolute; !*绝对定位*!*/
+/*    border-radius: 50%;*/
+/*    border: 2px solid #000000;*/
+/*}*/
+
+/*.eye::before {*/
+/*    content: '';*/
+/*    display: block;*/
+/*    width: 24px;*/
+/*    height: 24px;*/
+/*    background: white;*/
+/*    position: absolute;*/
+/*    border-radius: 50%;*/
+/*    left: 6px;*/
+/*    top: -1px;*/
+/*    border: 2px solid #000;*/
+/*}*/
+
+/*.eye.left {*/
+/*    right: 50%;*/
+/*    margin-right: 80px;*/
+/*}*/
+
+/*.eye.right {*/
+/*    left: 50%;*/
+/*    margin-left: 80px;*/
+/*}*/
+
+/*!*3 脸蛋*!*/
+/*.face {*/
+/*    width: 68px;*/
+/*    height: 68px;*/
+/*    background: #fc0d1c;*/
+/*    border: 2px solid black;*/
+/*    border-radius: 50%;*/
+/*    position: absolute;*/
+/*    top: 85px;*/
+/*}*/
+
+/*.face.left {*/
+/*    right: 50%;*/
+/*    margin-right: 100px;*/
+/*}*/
+
+/*.face.right {*/
+/*    left: 50%;*/
+/*    margin-left: 100px;*/
+/*}*/
+
+/*!*4 嘴唇*!*/
+/*!*4.1 上嘴唇*!*/
+/*.upperLip {*/
+/*    height: 25px;*/
+/*    width: 75px;*/
+/*    border: 2px solid black;*/
+/*    background: #ffe600;*/
+/*    transform: rotate(-20deg); !*角度*!*/
+/*    position: absolute;*/
+/*    top: 49px;*/
+/*}*/
+
+/*.upperLip.left {*/
+/*    right: 50%;*/
+/*    border-bottom-left-radius: 40px 25px; !*椭圆*!*/
+/*    border-top: none;*/
+/*    border-right: none;*/
+/*}*/
+
+/*.upperLip.right {*/
+/*    left: 50%;*/
+/*    border-bottom-right-radius: 40px 25px; !*椭圆*!*/
+/*    border-top: none;*/
+/*    border-left: none;*/
+/*    transform: rotate(20deg); !*角度*!*/
+/*}*/
+
+/*!*4.2 下嘴唇*!*/
+/*.lowerLip-wrapper {*/
+/*    bottom: 0;*/
+/*    position: absolute;*/
+/*    left: 50%;*/
+/*    margin-left: -150px;*/
+/*    !*z-index: -1; !*重叠顺序*!*!*/
+/*    !*border: 1px solid red;*!*/
+/*    !*height: 110px;*!*/
+/*    width: 300px;*/
+/*    overflow: hidden; !*就是溢出隐藏的意思*!*/
+/*    height: 125px; !**!*/
+/*    margin-bottom: -20px; !**!*/
+
+/*}*/
+
+/*.lowerLip {*/
+/*    width: 300px;*/
+/*    height: 3500px;*/
+/*    background: #990513;*/
+/*    !*background: #fc4a62;*!*/
+/*    border-radius: 200px/2000px;*/
+/*    border: 2px solid black;*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    overflow: hidden; !*在lowerLip外无法显示*!*/
+
+/*}*/
+
+/*.lowerLip::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    width: 100px;*/
+/*    height: 100px;*/
+/*    background: #fc4a62;*/
+/*    left: 50%;*/
+/*    margin-left: -50px;*/
+/*    border-radius: 50px;*/
+/*}*/
+
+#code {
+    overflow: hidden;
+    height: 100%;
+}
+
+.actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    /*border: 1px solid red;*/
+    display: flex;
+    flex-direction: column;
+}
+
+.actions > button {
+    margin: 10px;
+    background: #ddd;
+    padding: 8px 10px;
+    border: none;
+}
+
+.actions > button.active {
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.actions >button:focus {
+    outline: none;
+/*    去掉点击按钮出现的黄色*/
+}
+
+
+
+
+
+
+
